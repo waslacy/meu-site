@@ -4,4 +4,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #333747;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+#site-header {
+  padding: 20px 0;
+}
+#site-header.sticky {
+  background-color: #fff;
+}
+#site-header.sticky #site-nav a {
+  color: #111 !important;
+}
+#site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#site-header .container #logo {
+  color: #fff;
+  font: 500 1.4em "Poppins", sans-serif;
+}
+#site-header .container #site-nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+}
+#site-header .container #site-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font: 600 0.8em "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s linear;
+}
+#site-header .container #site-nav ul li a:hover {
+  color: #26d4ff !important;
 }/*# sourceMappingURL=style.css.map */

@@ -1,8 +1,60 @@
 @import './imports';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: $color-secondary;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 30px;
+}
+
+#site-header {
+    padding: 20px 0;
+
+    &.sticky{
+        background-color: #fff;
+
+        #site-nav a{
+            color: $color-gray !important;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #logo {
+            color: #fff;
+            font: 500 1.4em $font-primary;
+        }
+
+        #site-nav ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            list-style: none;
+
+            li a{
+                text-decoration: none;
+                color: #fff;
+                font: 600 0.8em $font-primary;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: .2s linear;
+
+                &:hover{
+                    color: $color-primary !important;
+                }
+            }
+        }
+    }
+}
