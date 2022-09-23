@@ -36,8 +36,10 @@ a.btn {
 }
 #site-header.sticky {
   background-color: #fff;
+  position: fixed;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-#site-header.sticky #site-nav a {
+#site-header.sticky #site-nav a, #site-header.sticky h1 {
   color: #111 !important;
 }
 #site-header .container {
