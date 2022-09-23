@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600&display=swap");
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333747;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: #333747;
 }
 
 .container {
@@ -16,7 +21,17 @@ body {
   padding: 0 30px;
 }
 
+a.btn {
+  padding: 12px 36px;
+  font: 400 1.2em "Roboto", sans-serif;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
 #site-header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
   padding: 20px 0;
 }
 #site-header.sticky {
@@ -29,6 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 #site-header .container #logo {
   color: #fff;
@@ -43,11 +59,109 @@ body {
 #site-header .container #site-nav ul li a {
   text-decoration: none;
   color: #fff;
-  font: 600 0.8em "Poppins", sans-serif;
+  font: 500 0.9em "Roboto", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.2s linear;
 }
 #site-header .container #site-nav ul li a:hover {
   color: #26d4ff !important;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+  background: url(../src/banner-home.jpg) center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+#home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+#home .container h1.apresentacao {
+  color: #fff;
+  font: 500 2.8em "Poppins", sans-serif;
+  text-align: center;
+}
+#home .container h1.apresentacao span {
+  font: 500 1.4em "Poppins", sans-serif;
+  color: #26d4ff;
+}
+#home .container h1.apresentacao span::before {
+  content: "Wallace Zatorski.";
+}
+@-webkit-keyframes apresentacao {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #26d4ff;
+  }
+  100% {
+    color: transparent;
+  }
+}
+@keyframes apresentacao {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #26d4ff;
+  }
+  100% {
+    color: transparent;
+  }
+}
+#home .container h1.apresentacao span::after {
+  content: "|";
+  -webkit-animation: apresentacao 1.2s infinite;
+          animation: apresentacao 1.2s infinite;
+}
+#home .container h2 {
+  color: #fff;
+  font: 500 1.8em "Poppins", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#home .container .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 60px;
+}
+#home .container .buttons a.btn.git {
+  background: transparent;
+  border: 1px solid #26d4ff;
+  color: #fff;
+}
+#home .container .buttons a.btn.git:hover {
+  background-color: #26d4ff;
+  color: #111;
+  transform: translateY(-3px);
+}
+#home .container .buttons a.btn.linkedin {
+  background: #26d4ff;
+  color: #111;
+  border: none;
+}
+#home .container .buttons a.btn.linkedin:hover {
+  background-color: #1fbfe7;
+  transform: translateY(-3px);
 }/*# sourceMappingURL=style.css.map */
