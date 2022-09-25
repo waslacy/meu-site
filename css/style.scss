@@ -1,11 +1,11 @@
 @import './imports';
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     background-color: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: $color-secondary;
 }
 
@@ -19,6 +19,23 @@
     margin: auto;
     max-width: 1200px;
     padding: 0 30px;
+}
+
+section {
+    padding: 60px 0;
+
+    .title {
+        font: 400 2.6em $font-primary;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+p {
+    font-family: $font-secondary;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6em;
 }
 
 a.btn {
@@ -39,7 +56,8 @@ a.btn {
         position: fixed;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-        #site-nav a, h1{
+        #site-nav a,
+        h1 {
             color: $color-gray  !important;
         }
     }
@@ -163,6 +181,80 @@ a.btn {
                         transform: translateY(-3px);
                     }
                 }
+            }
+        }
+    }
+}
+
+#quem-somos {
+    .content-sobre {
+        @include flex(inherit, inherit, row);
+        gap: 80px;
+
+        .right-column {
+            h3 {
+                font: 400 1.6em $font-primary;
+                color: #111;
+            }
+
+            span {
+                font: 300 1.1em $font-primary;
+                color: $color-gray-light;
+
+                &::after {
+                    content: "• PHP";
+                    animation: languagesAnimation 6s linear infinite;
+                }
+
+                @keyframes languagesAnimation {
+                    33% {
+                        content: "• Javascript";
+                    }
+
+                    66% {
+                        content: "• Python";
+                    }
+                }
+            }
+
+            p {
+                margin: 20px 0 40px;
+            }
+
+            a.btn {
+                background: $color-primary;
+                color: $color-gray;
+                border: none;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $color-primary-dark;
+                }
+            }
+
+            .placeholder {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .skills {
+        margin-top: 60px;
+        @include flex(space-between, inherit, row);
+
+        i {
+            border: 2px solid $color-primary;
+            border-radius: 5px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.4em;
+            color: $color-primary;
+
+            &:hover{
+                color: #fff;
+                background-color: $color-primary;
             }
         }
     }

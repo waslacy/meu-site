@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600&display=swap");
 ::-webkit-scrollbar {
@@ -21,6 +22,22 @@
   padding: 0 30px;
 }
 
+section {
+  padding: 60px 0;
+}
+section .title {
+  font: 400 2.6em "Poppins", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.6em;
+}
+
 a.btn {
   padding: 12px 36px;
   font: 400 1.2em "Roboto", sans-serif;
@@ -39,7 +56,8 @@ a.btn {
   position: fixed;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-#site-header.sticky #site-nav a, #site-header.sticky h1 {
+#site-header.sticky #site-nav a,
+#site-header.sticky h1 {
   color: #111 !important;
 }
 #site-header .container {
@@ -166,4 +184,77 @@ a.btn {
 #home .container .buttons a.btn.linkedin:hover {
   background-color: #1fbfe7;
   transform: translateY(-3px);
+}
+
+#quem-somos .content-sobre {
+  display: flex;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: row;
+  gap: 80px;
+}
+#quem-somos .content-sobre .right-column h3 {
+  font: 400 1.6em "Poppins", sans-serif;
+  color: #111;
+}
+#quem-somos .content-sobre .right-column span {
+  font: 300 1.1em "Poppins", sans-serif;
+  color: #313131;
+}
+#quem-somos .content-sobre .right-column span::after {
+  content: "• PHP";
+  -webkit-animation: languagesAnimation 6s linear infinite;
+          animation: languagesAnimation 6s linear infinite;
+}
+@-webkit-keyframes languagesAnimation {
+  33% {
+    content: "• Javascript";
+  }
+  66% {
+    content: "• Python";
+  }
+}
+@keyframes languagesAnimation {
+  33% {
+    content: "• Javascript";
+  }
+  66% {
+    content: "• Python";
+  }
+}
+#quem-somos .content-sobre .right-column p {
+  margin: 20px 0 40px;
+}
+#quem-somos .content-sobre .right-column a.btn {
+  background: #26d4ff;
+  color: #111;
+  border: none;
+  text-decoration: none;
+}
+#quem-somos .content-sobre .right-column a.btn:hover {
+  background-color: #1fbfe7;
+}
+#quem-somos .content-sobre .right-column .placeholder {
+  align-self: flex-end;
+}
+#quem-somos .skills {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  flex-direction: row;
+}
+#quem-somos .skills i {
+  border: 2px solid #26d4ff;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4em;
+  color: #26d4ff;
+}
+#quem-somos .skills i:hover {
+  color: #fff;
+  background-color: #26d4ff;
 }/*# sourceMappingURL=style.css.map */

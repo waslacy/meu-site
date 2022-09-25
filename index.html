@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#quem-somos">Quem somos</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#exp">Experiências</a></li>
                     <li><a href="#porfolio">Portfolio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -34,11 +34,15 @@
 
     <section id="home">
         <div class="container">
-            <h1 class="apresentacao">Olá, eu sou <br> <span></span></h1>
+            <h1 class="apresentacao">Olá, sou <br> <span></span></h1>
             <h2>Desenvolvedor web</h2>
             <div class="buttons">
-                <a class="btn git">Github</a>
-                <a class="btn linkedin">LinkedIn</a>
+                <a class="btn git">
+                    <i class="fa-brands fa-github"></i> Github
+                </a>
+                <a class="btn linkedin">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
             </div>
         </div>
     </section>
@@ -47,15 +51,39 @@
         <div class="container">
             <h2 class="title">Sobre mim</h2>
 
-            <div class="foto-minha">
-                <img src="foto-minha" alt="Foto minha perfil com fundo azul">
-            </div>
+            <div class="content-sobre">
+                <div class="left-column">
+                    <img src="src/foto-perfil.png" alt="Foto minha perfil com fundo azul" width="300">
 
-            <div class="content">
-                <h3>Wallace Zatorski de Sousa</h3>
-                <span>Javascript</span>
-                <span>PHP</span>
-                <span>Python</span>
+                    <div class="skills">
+                        <i class="fa-brands fa-html5" onmouseover="getSkills(html)"></i>
+                        <i class="fa-brands fa-css3-alt" onmouseover="getSkills(css)"></i>
+                        <i class="fa-brands fa-square-js" onmouseover="getSkills(js)"></i>
+                        <i class="fa-brands fa-php" onmouseover="getSkills(php)"></i>
+                        <i class="fa-brands fa-python" onmouseover="getSkills(python)"></i>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <h3>Wallace Zatorski de Sousa</h3>
+                    <span>Desenvolvedor </span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eligendi natus aperiam placeat
+                        culpa, rem dolorum harum, nisi porro dolor cum inventore deleniti reiciendis tempore molestiae
+                        dignissimos aliquid a velit.
+                        Officia dolorem magnam quae suscipit quibusdam provident similique, voluptatem nesciunt,
+                        molestiae consequuntur quidem maiores! Commodi, aperiam consectetur unde temporibus sed, in
+                        pariatur id cumque sit saepe vitae libero adipisci quae.
+                    </p>
+
+                    <a class="btn" href="src/CurrículoWallaceZatorski.pdf" target="_blank">
+                        Meu Currículo
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </a>
+
+
+                    <div id="skillPlaceholder">aa</div>
+                </div>
             </div>
         </div>
     </section>

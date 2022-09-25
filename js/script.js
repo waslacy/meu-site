@@ -7,3 +7,17 @@ $(document).ready(() => {
         }
     })
 })
+
+const skills = {
+    html: '',
+    css: '',
+    js: '',
+    php: '',
+    python: ''
+}
+
+function getSkills(lang) {
+    placeholder = document.getElementById('skillPlaceholder')
+
+    placeholder.innerHTML(skills.lang)
+}
