@@ -8,16 +8,14 @@ $(document).ready(() => {
     })
 })
 
-const skills = {
-    html: '',
-    css: '',
-    js: '',
-    php: '',
-    python: ''
+function addSkill(span){
+    let el = '#' + span.id
+    $('.skill div').css('display', 'flex')
+    $(el).css("opacity", 1)
 }
 
-function getSkills(lang) {
-    placeholder = document.getElementById('skillPlaceholder')
-
-    placeholder.innerHTML(skills.lang)
+function rmSkill(span){
+    let el = '#' + span.id
+    $('.skill div').css('display', 'none')
+    $(el).css("opacity", 0)
 }

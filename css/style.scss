@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-secondary
 }
 
 .container {
@@ -29,6 +30,11 @@ section {
         text-align: center;
         margin-bottom: 40px;
     }
+}
+
+section.dark{
+    background-color: $color-secondary;
+    color: #fff;
 }
 
 p {
@@ -192,12 +198,14 @@ a.btn {
         gap: 80px;
 
         .right-column {
+            @include flex(flex-start, flex-start, column);
+
             h3 {
                 font: 400 1.6em $font-primary;
                 color: #111;
             }
 
-            span {
+            span.langs {
                 font: 300 1.1em $font-primary;
                 color: $color-gray-light;
 
@@ -219,6 +227,7 @@ a.btn {
 
             p {
                 margin: 20px 0 40px;
+                text-align: justify;
             }
 
             a.btn {
@@ -232,8 +241,65 @@ a.btn {
                 }
             }
 
-            .placeholder {
-                align-self: flex-end;
+            .skill {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                height: 50px;
+                margin-top: auto;
+                
+                .lvl-bar {
+                    background-color: #cccccc;
+                    width: 450px;
+                    border-radius: 5px;
+                    height: 20px;
+                    position: relative;
+
+                    .lvl {
+                        display: flex;
+                        justify-content: center;
+                        background-color: $color-primary;
+                        border-radius: 5px;
+                        position: absolute;
+                        height: 100%;
+                        
+                        &#html {
+                            content: "";
+                            opacity: 0;
+                            @include skill('html', 95%);
+                        }
+
+                        &#css {
+                            content: "";
+                            opacity: 0;
+                            @include skill('css', 90%);
+                        }
+
+                        &#js {
+                            content: "";
+                            opacity: 0;
+                            @include skill('js', 88%);
+                        }
+
+                        &#php {
+                            content: "";
+                            opacity: 0;
+                            @include skill('php', 80%);
+                        }
+
+                        &#python {
+                            content: "";
+                            opacity: 0;
+                            @include skill('python', 35%);
+                        }
+                    }
+                }
+
+                .instrucao {
+                    font-size: 0.9em;
+                    color: #666666;
+                }
             }
         }
     }
@@ -256,6 +322,35 @@ a.btn {
                 color: #fff;
                 background-color: $color-primary;
             }
+        }
+    }
+}
+
+#exp {
+    .content {
+        @include flex(space-between, flex-start, row);
+        flex-wrap: wrap;
+        
+        h3 {
+            font: 400 1.6em $font-primary;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style: none;
+
+            .experiencia {
+                a{
+                    color: $color-primary;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .right-column, .left-column {
+            width: 50%;
         }
     }
 }

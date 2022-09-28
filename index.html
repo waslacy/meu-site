@@ -56,17 +56,17 @@
                     <img src="src/foto-perfil.png" alt="Foto minha perfil com fundo azul" width="300">
 
                     <div class="skills">
-                        <i class="fa-brands fa-html5" onmouseover="getSkills(html)"></i>
-                        <i class="fa-brands fa-css3-alt" onmouseover="getSkills(css)"></i>
-                        <i class="fa-brands fa-square-js" onmouseover="getSkills(js)"></i>
-                        <i class="fa-brands fa-php" onmouseover="getSkills(php)"></i>
-                        <i class="fa-brands fa-python" onmouseover="getSkills(python)"></i>
+                        <i class="fa-brands fa-html5" onmouseover="addSkill(html)" onmouseout="rmSkill(html)"></i>
+                        <i class="fa-brands fa-css3-alt" onmouseover="addSkill(css)" onmouseout="rmSkill(css)"></i>
+                        <i class="fa-brands fa-square-js" onmouseover="addSkill(js)" onmouseout="rmSkill(js)"></i>
+                        <i class="fa-brands fa-php" onmouseover="addSkill(php)" onmouseout="rmSkill(php)"></i>
+                        <i class="fa-brands fa-python" onmouseover="addSkill(python)" onmouseout="rmSkill(python)"></i>
                     </div>
                 </div>
 
                 <div class="right-column">
                     <h3>Wallace Zatorski de Sousa</h3>
-                    <span>Desenvolvedor </span>
+                    <span class="langs">Desenvolvedor </span>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eligendi natus aperiam placeat
                         culpa, rem dolorum harum, nisi porro dolor cum inventore deleniti reiciendis tempore molestiae
@@ -82,7 +82,82 @@
                     </a>
 
 
-                    <div id="skillPlaceholder">aa</div>
+                    <div class="skill">
+                        <div style="display: none;">
+                            0% &nbsp;
+                            <div class="lvl-bar">
+                                <span class="lvl" id="html">95%</span>
+                                <span class="lvl" id="css">90%</span>
+                                <span class="lvl" id="js">88%</span>
+                                <span class="lvl" id="php">80%</span>
+                                <span class="lvl" id="python">35%</span>
+                            </div>
+                            &nbsp; 100%
+                        </div>
+
+                        <span class="instrucao">// Passe o mouse nas tecnologias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exp" class="dark">
+        <div class="container">
+            <h2 class="title">Experiências</h2>
+
+            <div class="content">         
+                <div class="left-column">
+                    <h3 class="subtitle">Profissionais</h3>
+
+                    <ul>
+                        <li class="experiencia">
+                            <h4>Desenvolvedor full-stack - Tecleweb</h4>
+                            <span>02/2022 - atual</span>
+                            <p>
+                                Criação de sistemas personalizados em PHP (Laravel) e Js (Vuejs) <br>
+                            </p>
+                            <a href="https://tecleweb.com">Tecleweb® >></a>
+                        </li>
+
+                        <li class="experiencia">
+                            <h4>Web Developer - Freelance</h4>
+                            <span>01/2021 - 02/2022</span>
+                            <p>Criação de sites em HTML, CSS, Javascript e Wordpress</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-column">
+                    <h3 class="subtitle">Acadêmicas</h3>
+
+                    <ul>
+                        <li class="experiencia">
+                            <h4>Curso Desenvolvimento Web completo</h4>
+                            <span>114 Horas</span>
+                            <p>Criação de aplicações Web com HTML, CSS, Javascript, PHP, Jquery, MySql e Mais</p>
+                            <a
+                                href="https://www.udemy.com/certificate/UC-c70d75f2-fc29-4c02-9a6a-f543f7da6305/">Certificado >></a>
+                        </li>
+
+                        <li class="experiencia">
+                            <h4>
+                                UI & UX Design de aplicativos e sites - Adobe XD e PSD 2022
+                            </h4>
+                            <span>16 Horas</span>
+                            <p>Criação de interfaces mobile e desktop UI & UX com Adobe XD e PSD</p>
+                            <a href="#"></a>
+                        </li>
+
+                        <li class="experiencia">
+                            <h4>
+                                Curso VueJs 3
+                            </h4>
+                            <span>43 Horas</span>
+                            <p>Curso completo sobre VueJs do básico ao avançado com 6 projetos</p>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

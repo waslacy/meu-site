@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -29,6 +30,11 @@ section .title {
   font: 400 2.6em "Poppins", sans-serif;
   text-align: center;
   margin-bottom: 40px;
+}
+
+section.dark {
+  background-color: #333747;
+  color: #fff;
 }
 
 p {
@@ -193,15 +199,21 @@ a.btn {
   flex-direction: row;
   gap: 80px;
 }
+#quem-somos .content-sobre .right-column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
 #quem-somos .content-sobre .right-column h3 {
   font: 400 1.6em "Poppins", sans-serif;
   color: #111;
 }
-#quem-somos .content-sobre .right-column span {
+#quem-somos .content-sobre .right-column span.langs {
   font: 300 1.1em "Poppins", sans-serif;
   color: #313131;
 }
-#quem-somos .content-sobre .right-column span::after {
+#quem-somos .content-sobre .right-column span.langs::after {
   content: "• PHP";
   -webkit-animation: languagesAnimation 6s linear infinite;
           animation: languagesAnimation 6s linear infinite;
@@ -224,6 +236,7 @@ a.btn {
 }
 #quem-somos .content-sobre .right-column p {
   margin: 20px 0 40px;
+  text-align: justify;
 }
 #quem-somos .content-sobre .right-column a.btn {
   background: #26d4ff;
@@ -234,8 +247,147 @@ a.btn {
 #quem-somos .content-sobre .right-column a.btn:hover {
   background-color: #1fbfe7;
 }
-#quem-somos .content-sobre .right-column .placeholder {
-  align-self: flex-end;
+#quem-somos .content-sobre .right-column .skill {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 50px;
+  margin-top: auto;
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar {
+  background-color: #cccccc;
+  width: 450px;
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl {
+  display: flex;
+  justify-content: center;
+  background-color: #26d4ff;
+  border-radius: 5px;
+  position: absolute;
+  height: 100%;
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl#html {
+  content: "";
+  opacity: 0;
+  -webkit-animation: "html" 0.6s linear;
+          animation: "html" 0.6s linear;
+  width: 95%;
+}
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl#css {
+  content: "";
+  opacity: 0;
+  -webkit-animation: "css" 0.6s linear;
+          animation: "css" 0.6s linear;
+  width: 90%;
+}
+@-webkit-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl#js {
+  content: "";
+  opacity: 0;
+  -webkit-animation: "js" 0.6s linear;
+          animation: "js" 0.6s linear;
+  width: 88%;
+}
+@-webkit-keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl#php {
+  content: "";
+  opacity: 0;
+  -webkit-animation: "php" 0.6s linear;
+          animation: "php" 0.6s linear;
+  width: 80%;
+}
+@-webkit-keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+#quem-somos .content-sobre .right-column .skill .lvl-bar .lvl#python {
+  content: "";
+  opacity: 0;
+  -webkit-animation: "python" 0.6s linear;
+          animation: "python" 0.6s linear;
+  width: 35%;
+}
+@-webkit-keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+@keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+#quem-somos .content-sobre .right-column .skill .instrucao {
+  font-size: 0.9em;
+  color: #666666;
 }
 #quem-somos .skills {
   margin-top: 60px;
@@ -257,4 +409,28 @@ a.btn {
 #quem-somos .skills i:hover {
   color: #fff;
   background-color: #26d4ff;
+}
+
+#exp .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#exp .content h3 {
+  font: 400 1.6em "Poppins", sans-serif;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 40px;
+}
+#exp .content ul {
+  list-style: none;
+}
+#exp .content ul .experiencia a {
+  color: #26d4ff;
+  text-decoration: none;
+}
+#exp .content .right-column, #exp .content .left-column {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

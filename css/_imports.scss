@@ -10,9 +10,26 @@ $color-gray: #111;
 $color-gray-light: #313131;
 $color-primary-dark: #1fbfe7;
 
-@mixin flex($justify, $align, $direction){
+@mixin flex($justify, $align, $direction) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
+}
+
+@mixin skill($name, $value) {
+    animation: $name .6s linear;
+    width: $value;
+
+    @at-root {
+        @keyframes #{$name} {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: $value;
+            }
+        }
+    }
 }
